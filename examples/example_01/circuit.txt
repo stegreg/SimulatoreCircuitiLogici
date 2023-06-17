@@ -1,0 +1,68 @@
+//Il grafico di questo circuito è nella figura Test1.png
+
+//Definisci tutti i segnali di ingresso
+def signal A
+def signal B
+def signal C
+def signal D
+
+//Definisci tutti gli altri segnali
+def signal NotAOut
+def signal NotBOut
+def signal NotCOut
+def signal AndAOut
+def signal AndBOut
+def signal AndCOut
+def signal AndDOut
+def signal OrAOut
+def signal OrBOut
+
+//Definisci tutte le porte
+def gate AndA AND
+def gate AndB AND
+def gate AndC AND
+def gate AndD AND
+def gate NotA NOT
+def gate NotB NOT
+def gate NotC NOT
+def gate OrA OR
+def gate OrB OR
+
+//Fai i collegamenti
+link A AndA I0
+link NotAOut AndA I1
+link AndAOut AndA O0
+link AndAOut AndB I0
+link C AndB I1
+link AndBOut AndB O0
+link NotBOut AndC I0
+link NotCOut AndC I1
+link AndCOut AndC O0
+link AndCOut AndD I0
+link D AndD I1
+link AndDOut AndD O0
+link B NotA I0
+link NotAOut NotA O0
+link A NotB I0
+link NotBOut NotB O0
+link C NotC I0
+link NotCOut NotC O0
+link A OrA I0
+link OrBOut OrA I1
+link OrAOut OrA O0
+link AndBOut OrB I0
+link AndDOut OrB I1
+link OrBOut OrB O0
+
+//In questo esempio sto mettendo soltanto B su high
+//ma ho testato anche per tutte le altre combinazioni dei segnali in ingresso
+def event raise B 0
+
+simulate 5
+
+//Visualizza le tracce
+print track A
+print track B
+print track C
+print track D
+print track OrAOut
