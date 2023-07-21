@@ -9,7 +9,7 @@ public class QuitVerboHandler extends VerboHandler {
 
 	@Override
 	public void esegui(List<String> parametriVerbo, Circuito cir) throws ComandoNonValidoException {
-		System.out.println("Uscita dal programma...bye!");
+		System.out.println("Quitting program...bye!");
 		System.exit(0);
 	}
 

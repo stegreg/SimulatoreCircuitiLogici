@@ -41,14 +41,14 @@ public class PrintVerboHandler extends VerboHandler {
 			
 			if(tempoMax > 0) {
 				//Disegna la timeline
-				System.out.print("\t");
+				System.out.print("\t\t");
 				for(int i = 0; i < tempoMax; i++) {
 					System.out.print(i + "\t");
 				}
 				System.out.println("\n");
 				
 				//Disegna il segnale nel tempo
-				System.out.print(nomeSegnale + "\t");			
+				System.out.print(nomeSegnale + "\t\t");			
 				for(int i = 0; i < tempoMax; i++) 
 					System.out.print(track.get(i) == true ? "H\t" : "L\t");
 				System.out.print("\n");

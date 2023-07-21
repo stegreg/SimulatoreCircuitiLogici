@@ -12,16 +12,16 @@ public class ValidateVerboHandler extends VerboHandler {
 	public void esegui(List<String> parametriVerbo, Circuito cir) throws ComandoNonValidoException {
 		Map<String, List<String>> porteNonValide = cir.valida();
 		
-		System.out.println("Risultato validazione: ");
+		System.out.println("Validation results: ");
 		if(porteNonValide.size() > 0) {
-			System.out.println("I seguenti slot non sono stati collegati:");
+			System.out.println("The following slots are not yet linked:");
 			for(Map.Entry<String, List<String>> entry : porteNonValide.entrySet()) {
 				for(int i = 0; i < entry.getValue().size(); i++)
-					System.out.println("Slot '" + entry.getValue().get(i)  +"' della porta '"  + entry.getKey() + "'");
+					System.out.println("Slot '" + entry.getValue().get(i)  +"' of gate '"  + entry.getKey() + "'");
 			}
 		}
 		else
-			System.out.println("Tutto collegato!");
+			System.out.println("All linked!");
 	}
 
 }
