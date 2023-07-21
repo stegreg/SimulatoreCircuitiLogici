@@ -14,7 +14,7 @@ public class HelpVerboHandler extends VerboHandler {
 		else if(parametriVerbo.size() == 1) {
 			String verboCercato = parametriVerbo.get(0);
 			
-			if(verboCercato.equalsIgnoreCase("cls")) 
+			if(verboCercato.equalsIgnoreCase("clr")) 
 				printClear();
 
 			if(verboCercato.equalsIgnoreCase("def")) 
@@ -64,7 +64,7 @@ public class HelpVerboHandler extends VerboHandler {
 	}
 	
 	private void printClear() {
-		System.out.println("cls: clears all previously placed circuit elements (gates and signals).\n");
+		System.out.println("clr: clears all previously placed circuit elements (gates and signals).\n");
 	}
 	
 	private void printDef() {

@@ -55,7 +55,7 @@ public class VerboHandlerFactory {
 		if(
 				tipoLC.equals("clear") 		||
 				tipoLC.equals("pulisci")	||
-				tipoLC.equals("cls")
+				tipoLC.equals("clr")
 				)
 			return new ClearVerboHandler();
 		
