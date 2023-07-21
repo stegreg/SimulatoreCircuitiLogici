@@ -18,6 +18,8 @@ For example, a simple AND gate with its input and output signals can be defined 
 >> link MyInputSignal1 MyAnd I1
 >> link MyOutputSignal MyAnd O0
 ```
+The first line declares an and gate, named "MyAnd". The following three lines declare the three signals (two inputs and one ouput) that will
+be attached to the gate. The last three lines actually make the linking between the and gate and the signals.
 
 In order to simulate and print the results, the following commands can be used:
 ```
